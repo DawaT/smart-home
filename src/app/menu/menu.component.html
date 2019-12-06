@@ -1,0 +1,48 @@
+<div class="main-container">
+
+<div class="header-bar">
+  <div class="header-container"
+       fxLayout="row wrap"
+       fxLayout.lt-sm="column"
+       fxLayoutGap="2%"
+       fxLayoutAlign="center">
+
+    <mat-card routerLink="my-home" routerLinkActive="active" class="header" fxFlex="0 1 calc(33.3% -20px)">
+      <mat-icon>home</mat-icon> <P> My Home</P>
+    </mat-card>
+    <mat-card routerLink="scenario" routerLinkActive="active" class="header" fxFlex="0 1 calc(33.3% -20px)">
+      <mat-icon>extension</mat-icon><p> Scenario</p>
+    </mat-card>
+    <mat-card routerLink="profile" routerLinkActive="active" class="header" fxFlex="0 1 calc(33.3% -20px)">
+      <mat-icon>account_circle</mat-icon> <p> Profile</p>
+    </mat-card>
+<!--    <mat-card class="header" fxFlex="0 1 calc(15.9% -20px)">-->
+<!--      <mat-icon routerLink="../login">input</mat-icon>-->
+<!--    </mat-card>-->
+  </div>
+</div>
+
+  <router-outlet></router-outlet>
+
+  <div class="footer-bar">
+    <div class="footer-container"
+            fxLayout
+            fxLayout.lt-sm="row"
+            fxLayoutGap="0.5%">
+      <mat-card class="footer" routerLink="my-home" routerLinkActive="active" fxFlex="0 1 calc(33.3% - 20px)">
+        <mat-icon>home</mat-icon>
+
+      </mat-card>
+      <mat-card class="footer" routerLink="scenario" routerLinkActive="active" fxFlex="0 1 calc(33.3% - 20px)">
+        <mat-icon>extension</mat-icon>
+      </mat-card>
+      <mat-card class="footer" routerLink="profile" routerLinkActive="active" fxFlex="0 1 calc(33.3% - 20px)">
+        <mat-icon>account_circle</mat-icon>
+      </mat-card>
+<!--      <mat-card class="footer" fxFlex="0 1 calc(50% - 32px)">-->
+<!--        <mat-icon routerLink=".../login">input</mat-icon>-->
+<!--      </mat-card>-->
+    </div>
+  </div>
+</div>
+

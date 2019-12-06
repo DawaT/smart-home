@@ -1,0 +1,21 @@
+<div class="dialog">
+<h2>Add Room</h2>
+
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Room Name">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-slide-toggle>Bulb </mat-slide-toggle>
+    <input class="inpt" matInput matSuffix type="number">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-slide-toggle>Air Condition</mat-slide-toggle>
+    <input class="inpt" matInput matSuffix type="number">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()"> Save </button>
+  <button mat-raised-button matSuffix (click)="onNoClick()"> Cancel </button>
+</mat-dialog-actions>
+</div>

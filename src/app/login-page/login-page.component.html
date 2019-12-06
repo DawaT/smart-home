@@ -1,0 +1,30 @@
+<div class="login-container">
+  <div class="image">
+    <img class="img" mat-card-image src="assets/images/smarthome.jpg">
+  </div>
+      <mat-card class="login">
+        <mat-card-header class="header">
+          <mat-card-title class="login-header">Login</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <mat-form-field class="mat-form-field" appearance="outline">
+            <mat-label class="mat-label">Username</mat-label>
+            <input matInput [(ngModel)]="username" name="username" >
+          </mat-form-field>
+
+          <mat-form-field class="mat-form-field" appearance="outline">
+            <mat-label class="mat-label">Password</mat-label>
+            <input matInput [(ngModel)]="password" type="password" name="password" />
+          </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-actions class="login-button">
+          <button class="button" mat-raised-button (click)="login()" color="primary">Login</button>
+        </mat-card-actions>
+        <mat-checkbox>Remember Me</mat-checkbox>
+      </mat-card>
+
+  <p class="sign-up">Don't have an account? <a routerLink="/sign-up">Sign Up</a></p>
+
+</div>

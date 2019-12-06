@@ -1,0 +1,55 @@
+
+<div class="ac-container" fxLayout="column">
+  <h1>Air Condition</h1>
+  <div class="ac-icon">
+    <mat-tab-group class="ac-tab">
+      <mat-tab> <ng-template mat-tab-label><mat-icon>ac_unit</mat-icon></ng-template> Refrigeration mode </mat-tab>
+      <mat-tab><ng-template mat-tab-label><mat-icon>wb_sunny</mat-icon></ng-template>Sunny day mode </mat-tab>
+      <mat-tab><ng-template mat-tab-label><mat-icon>brightness_7</mat-icon></ng-template> Hot mode</mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="outerLayer">
+    <div class="back-blue">
+      <div class="front">
+        <h1>  {{gridsize.value}} &#8451; </h1>
+        <p>Current Temp: 34 &#8451;</p>
+      </div>
+    </div>
+  </div>
+<!--    <mat-slider thumbLabel value="24" [(ngModel)]="sliderVal" (change)="onChange($event)" ></mat-slider>-->
+<!--    tickInterval="1"-->
+  <mat-slider thumbLabel value="24" #gridsize (change)="onChange($event)" [value]="gridsize" ></mat-slider>
+
+  <table class="mode" cellspacing="22">
+    <tr>
+      <td>
+        <div class="mode-icon">
+          <mat-icon>power_settings_new</mat-icon>
+        </div>
+      </td>
+      <td>
+        <div class="mode-icon">
+        <mat-icon>brightness_3</mat-icon>
+      </div>
+      </td>
+      <td>
+        <div class="mode-icon">
+          <mat-icon>access_time</mat-icon>
+        </div>
+      </td>
+      <td>
+        <div class="mode-icon">
+          <mat-icon>settings_applications</mat-icon>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>On/Off</td>
+      <td>Sleep</td>
+      <td>Timing</td>
+      <td>Set Up</td>
+    </tr>
+  </table>
+
+  <a routerLink="../living-room">Go Back</a>
+</div>

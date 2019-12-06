@@ -1,0 +1,29 @@
+$skyblue: #33AEF2;
+$pink: #F5396C;
+$fontsize: 20px;
+
+.dialog{
+  margin: 0 auto;
+  text-align: center;
+
+  mat-form-field{
+    width: 100%;
+    box-shadow: 1px 1px 1px #888888;
+    margin: 2% auto;
+    border-radius: 10px;
+    .inpt{
+      width: 90%;
+    }
+  }
+  mat-dialog-actions{
+    button{
+      background-color: $pink;
+      color: white;
+    }
+  }
+
+
+}
+::ng-deep .mat-form-field-underline{
+  display: none;
+}

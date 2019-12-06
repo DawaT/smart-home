@@ -1,0 +1,141 @@
+$skyblue: #33AEF2;
+$pink: #F5396C;
+$fontsize: 20px;
+
+.living-room{
+  padding-bottom: 5%;
+  .room-left {
+    width: 100%;
+    height: auto;
+    padding-left: 5%;
+    .largeSize{
+      font-size: 30px;
+      padding-top: 4%;
+    }
+    p{
+      font-size: 20px;
+    }
+    .temp {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      max-width: 80%;
+      height: auto;
+      background-color: $skyblue;
+      border-radius: 10px;
+      padding-left: 5%;
+      padding-top: 2%;
+
+      table{
+        mat-icon {
+          color: white;
+          font-size: 40px;
+        }
+
+        .hum {
+          font-size: $fontsize;
+          color: white;
+          padding-right: 10%;
+        }
+      }
+
+    }
+  }
+
+.room-right{
+  max-width: 200px;
+  max-height:250px;
+  img{
+    width: 100%;
+  }
+  }
+
+.your-equip{
+  font-size: $fontsize;
+  padding-left: 7%;
+}
+
+.equipments-down, .equipments-up{
+  width: 100%;
+  height: auto;
+  }
+
+.room-contain{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px #888888;
+
+  .equ-img{
+    width: 50%;
+    margin:5px auto;
+    cursor: pointer;
+    outline: none;
+  }
+  .equ-img:hover{
+    transform: scale(1.1);
+  }
+  .add-icon{
+    font-size: 8vw;
+    padding: 33%;
+    cursor: pointer;
+  }
+  span{
+    font-size: 20px;
+    padding: 0 5%;
+    text-align: center;
+  }
+
+  mat-slide-toggle {
+    padding-top: 5%;
+    padding-left: 20%;
+    font-size: 20px;
+    color: $skyblue;
+  }
+  mat-icon{
+    padding-left: 10px;
+    font-size: 30px;
+    color: $pink;
+  }
+  mat-icon:hover{
+    transform: scale(1.2);
+  }
+}
+
+  @media screen and (max-width: 792px) {
+    .room-contain{
+      span{
+        font-size: 18px;
+      }
+
+      mat-slide-toggle {
+        font-size: 18px;
+      }
+      mat-icon{
+        font-size: 20px;
+      }
+    }
+
+    .room-left {
+      p{
+        font-size: 16px;
+      }
+      .temp {
+        table{
+          mat-icon {
+            font-size: 20px;
+          }
+
+          .hum {
+            font-size: 16px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+

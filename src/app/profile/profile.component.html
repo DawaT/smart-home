@@ -1,0 +1,124 @@
+<div class="profile">
+  <div class="basic-info" fxLayout="row" fxLayout.lt-sm="row">
+    <div class="profile-img" fxFlex="0 1 40%">
+      <mat-icon>account_circle</mat-icon>
+    </div>
+    <div class="name" fxFlex="0 1 60%">
+      <h1 style="color: white">Dawa Tshering</h1>
+      <p style="font-size: 15px; color: white">dawa.tshering@gmail.com</p>
+    </div>
+  </div>
+
+  <div id="edit-profile"  class="information">
+  <mat-accordion>
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>edit</mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          Edit Profile
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <form class="profile-form">
+      <mat-form-field class="profile-full-width">
+        <input matInput placeholder="Name">
+      </mat-form-field><br>
+
+      <mat-form-field class="profile-full-width">
+        <input matInput placeholder="User Name">
+      </mat-form-field><br>
+      <mat-form-field class="profile-full-width">
+        <input matInput placeholder="Phone Number">
+      </mat-form-field >
+      <button class="submit-button" mat-raised-button (click)="togglePanel()">Update</button>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
+
+  <div id="setting" class="information">
+    <mat-accordion >
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>live_help</mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            Help
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <h3>How to use this Application?</h3>
+        <ul>
+          <li class="agreement">On the homepage, fill out your first name, last name, mobile number or email, password, birthday, and gender.</li>
+          <li class="agreement">Click on the downward pointing arrow that’s located on the top right corner of any smart home page.</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel [expanded]="panelOpenState1">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>feedback</mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            Feedback
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <form class="profile-form">
+          <mat-form-field class="profile-full-width">
+            <input matInput placeholder="Email">
+          </mat-form-field><br>
+
+          <mat-form-field class="profile-full-width">
+            <textarea matInput placeholder="Your feedback"></textarea>
+          </mat-form-field>
+          <button class="submit-button" mat-raised-button (click)="togglePanel1()"> submit</button>
+
+        </form>
+
+
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>beenhere</mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            User Agreement & Privacy Policy
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+          <p class="agreement">An end-user license agreement (EULA) is a legal contract entered into between a software developer or vendor and the user of the software, often where the software has been purchased by the user from an intermediary such as a retailer. A EULA specifies in detail the rights and restrictions which apply to the use of the software.</p>
+        <mat-checkbox ngModel="checked" ng-init="checked=true">I Agree.</mat-checkbox>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>grade</mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            Rate
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="star">
+            <ul class="list-inline rating-list"
+                *ngFor="let star of stars" style="display: inline-block" >
+              <li (click)="countStar(star)"
+                  [ngClass]="{'selected': (star <= selectedValue)}">
+                <i class="fas fa-star checked"></i>
+              </li>
+            </ul>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <button mat-raised-button routerLink="/login"> Logout</button>
+</div>
