@@ -1,82 +1,82 @@
-
 <div class="home-container">
 
-  <div class="info-background">
-    <img src="assets/images/info2.jpg" />
+    <div class="info-background">
+        <img src="assets/images/info2.jpg"/>
+        <div class="homeHeader">
+            <table>
+                <tr class="dawaHome">Dawa's Home</tr>
+                <tr class="headerText"> Let's manage your smart home</tr>
+            </table>
+            <div class="cloud">
+                <table>
+                    <tr>
+                        <td>
+                            <mat-icon>wb_cloudy</mat-icon>
+                        </td>
+                        <td class="headerText cloudText ">67% Humidity and 27 &#8451;</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="headerText">3 Rooms | 5 Equipments</p>
 
-
-    <div class="homeHeader">
-
-      <table>
-        <tr class="dawaHome">Dawa's Home</tr>
-        <tr class="headerText"> Let's manage your smart home</tr>
-      </table>
-
-    <div class="cloud">
-      <table>
-        <tr>
-          <td><mat-icon>wb_cloudy</mat-icon></td>
-          <td class="headerText cloudText ">67% Humidity and 27 &#8451;</td>
-        </tr>
-      </table>
-    </div>
-      <p class="headerText">3 Rooms | 5 Equipments</p>
-
-   </div>
-  </div>
-
-  <div class="add-room" fxLayout="row">
-    <div class="text">Your rooms</div>
-    <div class="mat"><mat-icon (click)="openDialog()">add</mat-icon></div>
-  </div>
-
-  <div class="room-type"
-      fxLayout="row"
-      fxLayout.lt-sm="row"
-      fxLayoutGap="2%"
-      fxLayoutAlign="center">
-    <div routerLink="../living-room" class="rooms" fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-sm="100%">
-    <mat-card >
-      <img mat-card-image class="img" src="assets/images/livingroom1.jpg"/>
-    </mat-card>
-      <p>Living Room</p>
+        </div>
     </div>
 
-    <div class="rooms" fxFlex="0 1 calc(33.3% - 32px)"  fxFlex.lt-sm="100%">
-    <mat-card >
-      <img mat-card-image class="img" src="assets/images/bedroom.png">
-    </mat-card>
-      <p>Bed Room</p>
+    <div class="add-room" fxLayout="row">
+        <div class="text">Your rooms</div>
+        <div class="mat">
+            <mat-icon (click)="openDialog()">add</mat-icon>
+        </div>
     </div>
 
-    <div class="rooms" fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-sm="100%">
-    <mat-card>
-      <img mat-card-image class="img" src="assets/images/kitchen1.jpg">
-    </mat-card>
-      <p>kitchen</p>
+    <div class="room-type"
+         fxLayout="row"
+         fxLayout.lt-sm="row"
+         fxLayoutGap="2%"
+         fxLayoutAlign="center">
+        <div routerLink="../living-room" class="rooms" fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-sm="100%">
+            <mat-card>
+                <img mat-card-image src="assets/images/background.jpg"/>
+            </mat-card>
+            <p>Living Room</p>
+        </div>
+
+        <div routerLink="../living-room" class="rooms" fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-sm="100%">
+            <mat-card>
+                <img mat-card-image src="assets/images/bedroom.png">
+            </mat-card>
+            <p>Bed Room</p>
+        </div>
+
+        <div routerLink="../living-room" class="rooms" fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-sm="100%">
+            <mat-card>
+                <img mat-card-image src="assets/images/kitchen.jpg">
+            </mat-card>
+            <p>kitchen</p>
+        </div>
     </div>
-  </div>
-<!--  //fxFlex.lt-md="0 1 calc(50% - 32px)"-->
-  <div class="fav-sce" style="font-size: 20px"> Your Favourite Scenarios</div>
+    <!--  //fxFlex.lt-md="0 1 calc(50% - 32px)"-->
+    <div class="fav-sce" style="font-size: 20px"> Your Favourite Scenarios</div>
 
     <div class="fav"
          fxLayout="row wrap"
          fxLayout.lt-sm="row"
          fxLayoutGap="3%"
          fxLayoutAlign="center">
-      <div class="fav-1"  fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
-      <mat-card>
-        <img mat-card-image class="img" src="assets/images/wake.jpeg">
-      </mat-card>
-        <div class="text">Wake up</div>
-      </div>
-      <div class="fav-1" fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
-      <mat-card>
-        <img mat-card-image class="img" src="assets/images/sleep.jpg">
-      </mat-card>
-        <div class="text">Sleep</div>
-      </div>
-    </div><br>
+        <div class="fav-1" fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
+            <mat-card>
+                <img mat-card-image class="img" src="assets/images/wake.jpeg">
+            </mat-card>
+            <div class="text">Wake up</div>
+        </div>
+        <div class="fav-1" fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
+            <mat-card>
+                <img mat-card-image class="img" src="assets/images/sleep.jpg">
+            </mat-card>
+            <div class="text">Sleep</div>
+        </div>
+    </div>
+    <br>
 
     <div class="sce"
          fxLayout="row wrap"
@@ -84,19 +84,19 @@
          fxLayoutGap="3%"
          fxLayoutAlign="center">
 
-      <div class="fav-1" fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
-      <mat-card>
-        <img mat-card-image class="img" src="assets/images/goHome.jpg">
-      </mat-card>
-        <div class="text">Go Home</div>
-      </div>
+        <div class="fav-1" fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
+            <mat-card>
+                <img mat-card-image class="img" src="assets/images/goHome.jpg">
+            </mat-card>
+            <div class="text">Go Home</div>
+        </div>
 
-      <div class="fav-1" fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
-      <mat-card>
-        <img mat-card-image class="img" src="assets/images/leave.jpg">
-      </mat-card>
-        <div class="text">Leave Home</div>
-      </div>
-<!--  <router-outlet></router-outlet>-->
-</div>
+        <div class="fav-1" fxFlex="0 1 calc(49% - 32px)" fxFlex.lt-sm="100%">
+            <mat-card>
+                <img mat-card-image class="img" src="assets/images/leave.jpg">
+            </mat-card>
+            <div class="text">Leave Home</div>
+        </div>
+        <!--  <router-outlet></router-outlet>-->
+    </div>
 </div>

@@ -1,122 +1,142 @@
 <div class="living-room">
-  <div class="room" fxLayout="row" >
-    <div class="room-left" fxFlex="50%" fxLayout="column">
-      <span class="largeSize">Living Room</span>
-        <p>Your living room has been connected with 5 devices</p>
-      <div class="temp">
-        <table style="width:100%">
-          <tr>
-            <td><mat-icon>wb_cloudy</mat-icon></td>
-            <td class="hum">67% Humidity and 27 &#8451;</td>
-          </tr>
-        </table>
-      </div>
+    <div>
+        <div class="room">
+            <!--    <div class="room-left" fxFlex="50%" fxLayout="column">-->
+            <img mat-card-image class="living-img" src="assets/images/hang.jpeg"/>
+
+            <div class="leftSideText">
+                <span class="largeSize">Living Room</span>
+                <p>Your living room has been connected with 5 devices</p>
+                <div class="temp">
+                    <table>
+                        <tr>
+                            <td>
+                                <mat-icon>wb_cloudy</mat-icon>
+                            </td>
+                            <td class="hum">67% Humidity and 27 &#8451;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="room-right" fxFlex="50%">
-        <img mat-card-image class="living-img" src="assets/images/hang.jpeg"/>
-    </div>
-  </div>
-
-  <div class="your-equip">
-    <p>Your Equipments</p>
-  </div>
-
-  <div class="equipments-up"
-       fxLayout="row wrap"
-       fxLayout.xs="row"
-       fxLayoutGap="3%"
-       fxLayoutAlign="center">
-
-    <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-      <mat-slide-toggle>Off/On</mat-slide-toggle>
-      <img routerLink="../air-cond" class="equ-img" src="assets/images/ac.png">
-      <span>Air Condition</span>
-
-      <table style="width:100%">
-        <tr>
-          <td><mat-icon>turned_in</mat-icon></td>
-          <td>Add to scenario</td>
-        </tr>
-        <tr>
-          <td><mat-icon>delete</mat-icon></td>
-          <td>Remove</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-      <mat-slide-toggle>On/Off</mat-slide-toggle>
-      <img routerLink="../lamp" class="equ-img" src="assets/images/bulb.png">
-      <span>General Lamp</span>
-      <table style="width:100%">
-        <tr>
-          <td><mat-icon>turned_in</mat-icon></td>
-          <td>Add to scenario</td>
-        </tr>
-        <tr>
-          <td><mat-icon>delete</mat-icon></td>
-          <td>Remove</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-      <mat-slide-toggle>On/Off</mat-slide-toggle>
-      <img class="equ-img" src="assets/images/lamp.png">
-      <span>Nightstand Lamp</span>
-      <table style="width:100%">
-        <tr>
-          <td><mat-icon>turned_in</mat-icon></td>
-          <td>Add to scenario</td>
-        </tr>
-        <tr>
-          <td><mat-icon>delete</mat-icon></td>
-          <td>Remove</td>
-        </tr>
-      </table>
-    </div>
-  </div><br>
-
-  <div class="equipments-down"
-          fxLayout="row wrap"
+    <div class="equipments-up"
+         fxLayout="row wrap"
          fxLayout.xs="row"
          fxLayoutGap="3%"
          fxLayoutAlign="center">
-    <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-      <mat-slide-toggle>Off/On</mat-slide-toggle>
-      <img class="equ-img" src="assets/images/curtain.png">
-      <span>Window Blinds</span>
-      <table style="width:100%">
-        <tr>
-          <td><mat-icon>turned_in</mat-icon></td>
-          <td>Add to scenario</td>
-        </tr>
-        <tr>
-          <td><mat-icon>delete</mat-icon></td>
-          <td>Remove</td>
-        </tr>
-      </table>
+        <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
+            <mat-slide-toggle>Off/On</mat-slide-toggle>
+            <img routerLink="../air-cond" class="equ-img" src="assets/images/ac.png">
+            <span>Air Condition</span>
+
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <mat-icon>turned_in</mat-icon>
+                    </td>
+                    <td>Add to scenario</td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-icon>delete</mat-icon>
+                    </td>
+                    <td>Remove</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
+            <mat-slide-toggle>On/Off</mat-slide-toggle>
+            <img routerLink="../lamp" class="equ-img" src="assets/images/bulb.png">
+            <span>General Lamp</span>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <mat-icon>turned_in</mat-icon>
+                    </td>
+                    <td>Add to scenario</td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-icon>delete</mat-icon>
+                    </td>
+                    <td>Remove</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
+            <mat-slide-toggle>On/Off</mat-slide-toggle>
+            <img class="equ-img" src="assets/images/lamp.png">
+            <span>Nightstand Lamp</span>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <mat-icon>turned_in</mat-icon>
+                    </td>
+                    <td>Add to scenario</td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-icon>delete</mat-icon>
+                    </td>
+                    <td>Remove</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-      <mat-slide-toggle>Off/On</mat-slide-toggle>
-      <img class="equ-img" src="assets/images/chandelier.png">
-      <span>Central Chandelier</span>
-      <table style="width:100%">
-        <tr>
-          <td><mat-icon>turned_in</mat-icon></td>
-          <td>Add to scenario</td>
-        </tr>
-        <tr>
-          <td><mat-icon>delete</mat-icon></td>
-          <td>Remove</td>
-        </tr>
-      </table>
+    <br>
+
+    <div class="equipments-down"
+         fxLayout="row wrap"
+         fxLayout.xs="row"
+         fxLayoutGap="3%"
+         fxLayoutAlign="center">
+        <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
+            <mat-slide-toggle>Off/On</mat-slide-toggle>
+            <img class="equ-img" src="assets/images/curtain.png">
+            <span>Window Blinds</span>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <mat-icon>turned_in</mat-icon>
+                    </td>
+                    <td>Add to scenario</td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-icon>delete</mat-icon>
+                    </td>
+                    <td>Remove</td>
+                </tr>
+            </table>
+        </div>
+        <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
+            <mat-slide-toggle>Off/On</mat-slide-toggle>
+            <img class="equ-img" src="assets/images/chandelier.png">
+            <span>Central Chandelier</span>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <mat-icon>turned_in</mat-icon>
+                    </td>
+                    <td>Add to scenario</td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-icon>delete</mat-icon>
+                    </td>
+                    <td>Remove</td>
+                </tr>
+            </table>
+        </div>
+        <div class="room-contain" id="AddIcon" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
+            <div>
+                <mat-icon class="add-icon">add</mat-icon>
+            </div>
+            <div style="text-align: center">Click to add more Equipments</div>
+        </div>
     </div>
-    <div class="room-contain" id="AddIcon" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-      <div><mat-icon class="add-icon">add</mat-icon></div>
-      <div style="text-align: center">Click to add more Equipments</div>
-    </div>
-  </div>
 
 </div>

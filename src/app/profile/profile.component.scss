@@ -1,51 +1,62 @@
 $skyblue: #33AEF2;
 $pink: #F5396C;
 $fontsize: 20px;
-.profile{
+
+.profile {
   display: flex;
   flex-direction: column;
   height: 800px;
-.basic-info{
-  background-color: #9c998f;
-  .profile-img{
-    margin: 2% auto;
-    padding-left: 10%;
-    mat-icon{
-      font-size: 200px;
-      color: white;
+
+  .basic-info {
+    background-color: #d7d9d7;
+
+    .profile-img {
+      margin: 2% auto;
+      padding-left: 10%;
+
+      mat-icon {
+        font-size: 200px;
+        color: white;
+      }
+    }
+
+    .name {
+      padding-top: 4%;
     }
   }
-  .name{
-    padding-top: 4%;
-  }
-}
-.information{
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-  border-radius:  1px 1px 20px #000000;
-}
-#edit-profile{
-  margin-top: -20px;
-  mat-expansion-panel{
-    margin: auto;
-    width: 100%;
+
+  .information {
+    width: 80%;
     height: auto;
+    margin: 0 auto;
+    border-radius: 1px 1px 20px #000000;
   }
-}
-#setting{
-  padding-top: 5%;
-}
-  mat-panel-description{
+
+  #edit-profile {
+    margin-top: -20px;
+
+    mat-expansion-panel {
+      margin: auto;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  #setting {
+    padding-top: 5%;
+  }
+
+  mat-panel-description {
     font-size: 20px;
   }
 
-  .submit-button{
+  .submit-button {
     width: 20%;
     background-color: $pink;
     color: #ffffff;
   }
-  button{
+
+  button {
     width: 80%;
     height: 50px;
     font-size: 20px;
@@ -53,50 +64,60 @@ $fontsize: 20px;
     margin: 4% auto;
     color: #ffffff;
   }
-  button:hover{
+
+  button:hover {
     transform: scale(1.03);
     box-shadow: 1px 1px 5px #888888;
   }
+
   .profile-form {
     min-width: 150px;
     max-width: 100%;
     width: 100%;
     font-size: 18px;
   }
+
   .profile-full-width {
     width: 100%;
     font-size: 18px;
   }
-  .agreement{
+
+  .agreement {
     font-size: 18px;
   }
 }
-  .rating-list {
-    li {
-      float: right;
-      color: #ddd;
-      padding: 10px 5px;
-      font-size: 20px;
-    }
+
+.rating-list {
+  li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+    font-size: 20px;
   }
-  .rating-list li:hover,
-  .rating-list li:hover ~ li, .rating-list li.selected {
-    color: #ffd700;
-  }
-  .rating-list {
-    display: inline-block;
-    list-style: none;
-  }
-  @media screen and (max-width: 720px) {
-    .profile {
-      height: 800px;
-      .basic-info {
-        .profile-img {
-          padding-left: 3%;
-          mat-icon {
-            font-size: 150px;
-          }
+}
+
+.rating-list li:hover,
+.rating-list li:hover ~ li, .rating-list li.selected {
+  color: #ffd700;
+}
+
+.rating-list {
+  display: inline-block;
+  list-style: none;
+}
+
+@media screen and (max-width: 720px) {
+  .profile {
+    height: 800px;
+
+    .basic-info {
+      .profile-img {
+        padding-left: 3%;
+
+        mat-icon {
+          font-size: 150px;
         }
       }
     }
   }
+}

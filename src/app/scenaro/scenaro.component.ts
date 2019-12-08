@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatBottomSheet} from '@angular/material';
+import {AddScenarioComponent} from '../add-scenario/add-scenario.component';
 
 @Component({
   selector: 'app-scenaro',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScenaroComponent implements OnInit {
 
-  constructor() { }
+  // tslint:disable-next-line:variable-name
+  constructor(private _bottomSheet: MatBottomSheet) { }
 
   ngOnInit() {
   }
-
+  openBottomSheet(): void {
+    this._bottomSheet.open(AddScenarioComponent);
+  }
 }

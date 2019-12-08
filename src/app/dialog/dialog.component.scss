@@ -2,28 +2,43 @@ $skyblue: #33AEF2;
 $pink: #F5396C;
 $fontsize: 20px;
 
-.dialog{
+.dialog {
   margin: 0 auto;
   text-align: center;
 
-  mat-form-field{
+  mat-form-field {
     width: 100%;
     box-shadow: 1px 1px 1px #888888;
     margin: 2% auto;
     border-radius: 10px;
-    .inpt{
-      width: 90%;
+
+    .inpt {
+      font-size: 20px;
+      width: 50%;
     }
   }
-  mat-dialog-actions{
-    button{
+
+  mat-dialog-actions {
+    button {
       background-color: $pink;
       color: white;
     }
   }
 
+  .Equ-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin: 3% 0;
+  }
+
+  .Equ-type {
+    margin-left: 20px;
+    display: inline;
+  }
 
 }
-::ng-deep .mat-form-field-underline{
+
+::ng-deep .mat-form-field-underline {
   display: none;
 }
