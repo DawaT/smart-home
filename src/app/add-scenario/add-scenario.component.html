@@ -1,0 +1,34 @@
+<div class="Add-scenario">
+    <mat-card-title>Add Scenario</mat-card-title>
+    <form>
+        <mat-form-field class="matForm">
+            <input matInput placeholder="Scenario Name">
+        </mat-form-field>
+    </form>
+
+    <div class="grid-container">
+        <div class="grid-item">Light</div>
+        <div class="grid-item">
+            <mat-slide-toggle>On/Off</mat-slide-toggle>
+        </div>
+        <div class="grid-item">Time</div>
+        <div class="grid-item">From: <input type="time"></div>
+        <div class="grid-item">To: <input type="time"></div>
+        <div class="grid-item">Air Condition</div>
+        <div class="grid-item">
+            <mat-slide-toggle>On/Off</mat-slide-toggle>
+        </div>
+        <div class="grid-item">Time</div>
+        <div class="grid-item">From: <input type="time"></div>
+        <div class="grid-item">To: <input type="time"></div>
+    </div>
+    <div class="AddtoHome">
+        <div class="grid-item">Add on Homepage</div>
+        <div class="grid-item">
+            <mat-slide-toggle>add</mat-slide-toggle>
+        </div>
+    </div>
+    <button mat-raised-button (click)="onNoClick()"> Save</button>
+    <button mat-raised-button matSuffix (click)="onNoClick()"> Cancel</button>
+
+</div>

@@ -2,133 +2,167 @@ $skyblue: #33AEF2;
 $pink: #F5396C;
 $fontsize: 20px;
 
-.info-background {
-  position: relative;
-  max-width: 1400px;
-  height: auto;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  .homeHeader {
-    width: 50%;
-    position: absolute;
-    left: 4%;
-    top: 3%;
-  }
-  .headerText {
-    font-size: 20px;
-  }
-  table {
-    width: 100%;
-    margin: 4% 0;
-    .dawaHome {
-      font-size: 30px;
-    }
-    .cloudText{
-      color: white;
-      padding-left: 10%;
-    }
-  }
-
-  .cloud {
-    width: 80%;
-    background-color: $skyblue;
-    border-radius: 10px;
-
-    mat-icon {
-      font-size: 40px;
-      color: white;
-      padding-left: 10%;
-    }
-  }
-}
-
-.add-room{
+.home-container {
   width: 100%;
-  height: 40px;
-  display: flex;
-  .text{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 3%;
-    font-size: $fontsize;
-    padding-top: 1%;
-  }
-  .mat{
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    padding-right: 5%;
-    cursor: pointer;
-    mat-icon{
-      font-size: 40px;
-    }
-    mat-icon:hover{
-      transform: scale(1.2);
-    }
-  }
-}
-.fav-sce{
-  padding-left: 2.5%;
-  padding-top: 2%;
-}
-.room-type{
-  .rooms{
-    cursor: pointer;
-    position: relative;
 
-    //color: white;
-    p{
-      position: absolute;
-      bottom: 16%;
-      //text-align: center;
-      left: 8%;
-      font-weight: bold;
-      //font-size: 20px;
-    }
-  }
-  .rooms:hover{
-    transform: scale(1.05);
-  }
-}
-
-.fav-1{
-  position: relative;
-  .text{
-    width: 100%;
-    height: 30px;
-    background-color: rgba(14, 20, 18, 0.8);
-    position: absolute;
-    color: white;
-    text-align: center;
-    font-size: $fontsize;
-    //left: 4%;
-    bottom:1%;
-  }
-}
-
-@media screen and (max-width:550px ){
   .info-background {
+    position: relative;
+    max-width: 1400px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
     .homeHeader {
-      width: 80%
+      width: 50%;
+      position: absolute;
+      left: 4%;
+      top: 3%;
     }
+
     .headerText {
-      font-size: 16px;
+      font-size: 20px;
     }
+
     table {
+      width: 100%;
+      margin: 4% 0;
+
       .dawaHome {
-        font-size: 23px;
+        font-size: 30px;
+      }
+
+      .cloudText {
+        color: white;
+        padding-left: 10%;
       }
     }
+
     .cloud {
+      width: 80%;
+      background-color: $skyblue;
+      border-radius: 10px;
+
       mat-icon {
-        font-size: 25px;
+        font-size: 40px;
+        color: white;
+        padding-left: 10%;
       }
     }
   }
 
-}
+  .add-room {
+    width: 100%;
+    height: 40px;
+    display: flex;
 
+    .text {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 3%;
+      font-size: $fontsize;
+      padding-top: 1%;
+    }
+
+    .mat {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      padding-right: 5%;
+      cursor: pointer;
+
+      mat-icon {
+        font-size: 40px;
+      }
+
+      mat-icon:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .fav-sce {
+    padding-left: 2.5%;
+    padding-top: 2%;
+  }
+
+  .room-type {
+    .rooms {
+      cursor: pointer;
+      position: relative;
+      outline: none;
+
+      p {
+        position: absolute;
+        bottom: 5%;
+        left: 8%;
+        font-size: 20px;
+        color: white;
+      }
+    }
+
+    .rooms:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 10px #888888;
+    }
+  }
+
+  .mat-card > :last-child:not(.mat-card-footer) {
+    margin-bottom: -20px;
+  }
+
+  .fav-1 {
+    position: relative;
+    box-shadow: 1px 1px 4px #000000;
+    border-radius: 4px;
+
+    .img {
+      border-radius: 4px;
+    }
+
+    .text {
+      width: 100%;
+      height: 30px;
+      background-color: rgba(14, 20, 18, 0.8);
+      position: absolute;
+      bottom: 2%;
+      color: white;
+      text-align: center;
+      font-size: $fontsize;
+
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    height: 700px;
+    .info-background {
+      .homeHeader {
+        width: 90%;
+        position: absolute;
+        top: 0;
+      }
+
+      .headerText {
+        font-size: 16px;
+      }
+
+      table {
+        margin: 1% 0;
+
+        .dawaHome {
+          font-size: 20px;
+        }
+      }
+
+      .cloud {
+        mat-icon {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
 

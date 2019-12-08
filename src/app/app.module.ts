@@ -11,8 +11,10 @@ import {
   MatIconModule,
   MatCardModule,
   MatExpansionModule,
-  MatDialogModule, MatTableModule
+  MatDialogModule,
+  MatTableModule,
 } from '@angular/material';
+import {MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input';
@@ -32,6 +34,7 @@ import {MatSlideToggleModule} from '@angular/material';
 import {MatTabsModule} from '@angular/material';
 import { DialogComponent } from './dialog/dialog.component';
 import { GeneralLampComponent } from './general-lamp/general-lamp.component';
+import { AddScenarioComponent } from './add-scenario/add-scenario.component';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { GeneralLampComponent } from './general-lamp/general-lamp.component';
     LivingRoomComponent,
     AirConditionComponent,
     DialogComponent,
-    GeneralLampComponent
+    GeneralLampComponent,
+    AddScenarioComponent
   ],
   imports: [
     BrowserModule,
@@ -67,10 +71,12 @@ import { GeneralLampComponent } from './general-lamp/general-lamp.component';
     MatTabsModule,
     MatExpansionModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    MatBottomSheetModule
   ],
   entryComponents: [
-    DialogComponent
+    DialogComponent,
+    AddScenarioComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,44 +1,44 @@
-
 <div class="reg-container">
-  <div class="image">
-    <img class="img" mat-card-image src="assets/images/smarthome.jpg">
-  </div>
-  <mat-card class="login">
-    <mat-card-header class="header">
-      <mat-card-title class="login-header">Join the Smart Home Community</mat-card-title>
-    </mat-card-header>
+    <div class="image">
+        <img class="img" mat-card-image src="assets/images/smarthome.jpg">
+    </div>
+    <mat-card class="login">
+        <mat-card-header class="header">
+            <mat-card-title class="login-header">Join the Smart Home Community</mat-card-title>
+        </mat-card-header>
 
-    <mat-card-content>
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <mat-label class="mat-label">Name</mat-label>
-        <input matInput [(ngModel)]="Name" type="name" name="name" required>
-      </mat-form-field>
+        <mat-card-content>
+            <mat-form-field class="mat-form-field" appearance="outline">
+                <mat-label class="mat-label">Name</mat-label>
+                <input matInput [(ngModel)]="Name" type="name" name="name" required>
+            </mat-form-field>
 
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <mat-label class="mat-label">Username</mat-label>
-        <input matInput [(ngModel)]="username" name="username" required>
-      </mat-form-field>
+            <mat-form-field class="mat-form-field" appearance="outline">
+                <mat-label class="mat-label">Username</mat-label>
+                <input matInput [(ngModel)]="username" name="username" required>
+            </mat-form-field>
 
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <mat-label class="mat-label">Email</mat-label>
-        <input matInput [(ngModel)]="email" type="email" name="email" required>
-      </mat-form-field>
+            <mat-form-field class="mat-form-field" appearance="outline">
+                <mat-label class="mat-label">Email</mat-label>
+                <input matInput [(ngModel)]="email" type="email" name="email" required>
+            </mat-form-field>
 
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <mat-label class="mat-label">Password</mat-label>
-        <input matInput [(ngModel)]="password" type="password" name="password" required/>
-      </mat-form-field>
-    </mat-card-content>
+            <mat-form-field class="mat-form-field" appearance="outline">
+                <mat-label class="mat-label">Password</mat-label>
+                <input matInput [(ngModel)]="password" type="password" name="password" required/>
+            </mat-form-field>
+        </mat-card-content>
 
-    <span class="checkbox">
-      <p> <mat-checkbox></mat-checkbox> By clicking Create Account, you agree to the Smart Home's <a href="#">User Agreement</a>, <a href="#">Privacy</a>, <a href="#">Policy</a> and <a href="#">Cookie Policy</a></p>
+        <span class="checkbox">
+      <p> <mat-checkbox></mat-checkbox> By clicking Create Account, you agree to the Smart Home's <a href="#">User Agreement</a>, <a
+              href="#">Privacy</a>, <a href="#">Policy</a> and <a href="#">Cookie Policy</a></p>
     </span>
 
-    <mat-card-actions class="login-button">
-      <button class="button" mat-raised-button (click)="createAccount()">Create Account</button>
-    </mat-card-actions>
-  </mat-card>
+        <mat-card-actions class="login-button">
+            <button class="button" mat-raised-button (click)="createAccount()">Create Account</button>
+        </mat-card-actions>
+    </mat-card>
 
-  <p class="sign-up">Don't have an account? <a routerLink="/login">Login</a></p>
+    <p class="sign-up">Don't have an account? <a routerLink="/login">Login</a></p>
 
 </div>
