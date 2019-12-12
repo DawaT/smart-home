@@ -12,6 +12,7 @@ export class LoginPageComponent implements OnInit {
 
   username: string;
   password: string;
+  hide = true ;
 
   ngOnInit() {
   }
