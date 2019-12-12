@@ -9,14 +9,14 @@
     <div class="grid-container">
         <div class="grid-item">Light</div>
         <div class="grid-item">
-            <mat-slide-toggle>On/Off</mat-slide-toggle>
+            <mat-slide-toggle (change)="setLight($event)">{{light}}</mat-slide-toggle>
         </div>
         <div class="grid-item">Time</div>
         <div class="grid-item">From: <input type="time"></div>
         <div class="grid-item">To: <input type="time"></div>
         <div class="grid-item">Air Condition</div>
         <div class="grid-item">
-            <mat-slide-toggle>On/Off</mat-slide-toggle>
+            <mat-slide-toggle (change)="setAC($event)">{{ac}}</mat-slide-toggle>
         </div>
         <div class="grid-item">Time</div>
         <div class="grid-item">From: <input type="time"></div>

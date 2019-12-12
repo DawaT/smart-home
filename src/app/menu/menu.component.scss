@@ -1,6 +1,13 @@
 $skyblue: #33AEF2;
-$pink: #F5396C;
+$pink: #ff6666;
 $fontsize: 20px;
+
+@mixin style {
+  width: 100%;
+  height: auto;
+  background-color: $skyblue;
+  outline: none;
+}
 
 .main-container {
   max-width: 1200px;
@@ -10,31 +17,25 @@ $fontsize: 20px;
 }
 
 .header-bar {
+  @include style;
   display: block;
-  background-color: $skyblue;
-  box-shadow: 1px 1px 20px #888888;
+  box-shadow: 1px 1px 5px #888888;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
-  outline: none;
 
   .header-container {
-    max-width: 100%;
-    height: auto;
-    background-color: $skyblue;
-    outline: none;
+    @include style;
 
     .header {
+      @include style;
       display: flex;
       flex-direction: row;
       padding-top: 1%;
       padding-left: 7%;
       height: 70px;
-      background-color: $skyblue;
       -webkit-box-shadow: none;
-      box-shadow: none;
-      outline: none;
 
       mat-icon {
         font-size: 55px;
@@ -50,11 +51,11 @@ $fontsize: 20px;
         color: white;
       }
 
-    }
+      &:hover {
+        transform: scale(1.02);
+        text-shadow: 2px 2px 4px #000000;
+      }
 
-    .header:hover {
-      transform: scale(1.0);
-      text-shadow: 2px 2px 4px #000000;
     }
 
   }
@@ -66,7 +67,8 @@ mat-card {
 
 mat-card.active {
   text-shadow: 2px 2px 8px #000000;
-  border: none
+  border: none;
+  transform: scale(1.02);
 }
 
 .footer-bar {
@@ -74,30 +76,26 @@ mat-card.active {
   display: none;
 
   .footer-container {
-    width: 100%;
-    height: auto;
-    background-color: $skyblue;
-    outline: none;
+    @include style;
     padding-bottom: 10px;
 
     .footer {
+      @include style;
       height: 50px;
-      background-color: $skyblue;
-      padding-left: 15%;
+      text-align: center;
+      //padding-right: 1%;
       cursor: pointer;
       -webkit-box-shadow: none;
-      box-shadow: none;
-      outline: none;
 
       mat-icon {
         font-size: 40px;
         outline: none;
         color: white;
       }
-    }
 
-    .footer:hover {
-      text-shadow: 2px 2px 8px #000000;
+      &:hover {
+        text-shadow: 2px 2px 8px #000000;
+      }
     }
   }
 }

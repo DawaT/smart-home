@@ -1,18 +1,26 @@
 $skyblue: #33AEF2;
-$pink: #F5396C;
+$pink: #ff6666;
 $fontsize: 20px;
+
+@mixin dimension{
+  width: 100%;
+  height: auto;
+}
+@mixin flexContain{
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+}
 
 .home-container {
   width: 100%;
 
   .info-background {
     position: relative;
-    max-width: 1400px;
-    height: auto;
+    @include dimension;
 
     img {
-      width: 100%;
-      height: 100%;
+      @include dimension;
     }
 
     .homeHeader {
@@ -23,11 +31,11 @@ $fontsize: 20px;
     }
 
     .headerText {
-      font-size: 20px;
+      font-size: $fontsize;
     }
 
     table {
-      width: 100%;
+      @include dimension;
       margin: 4% 0;
 
       .dawaHome {
@@ -59,23 +67,20 @@ $fontsize: 20px;
     display: flex;
 
     .text {
-      flex: 1;
-      display: flex;
-      justify-content: flex-start;
+      @include flexContain;
       padding-left: 3%;
       font-size: $fontsize;
       padding-top: 1%;
     }
 
     .mat {
-      display: flex;
-      flex: 1;
+      @include flexContain;
       justify-content: flex-end;
       padding-right: 5%;
-      cursor: pointer;
 
       mat-icon {
         font-size: 40px;
+        cursor: pointer;
       }
 
       mat-icon:hover {
@@ -91,13 +96,13 @@ $fontsize: 20px;
 
   .room-type {
     .rooms {
-      cursor: pointer;
       position: relative;
       outline: none;
+      cursor: pointer;
 
       p {
         position: absolute;
-        bottom: 5%;
+        bottom: 3%;
         left: 8%;
         font-size: 20px;
         color: white;
@@ -137,7 +142,7 @@ $fontsize: 20px;
   }
 
   @media screen and (max-width: 560px) {
-    height: 700px;
+    height: 100vh;
     .info-background {
       .homeHeader {
         width: 90%;
@@ -153,7 +158,7 @@ $fontsize: 20px;
         margin: 1% 0;
 
         .dawaHome {
-          font-size: 20px;
+          font-size: $fontsize;
         }
       }
 

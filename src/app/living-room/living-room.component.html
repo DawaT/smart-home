@@ -1,32 +1,32 @@
 <div class="living-room">
-    <div>
-        <div class="room">
-            <!--    <div class="room-left" fxFlex="50%" fxLayout="column">-->
-            <img mat-card-image class="living-img" src="assets/images/hang.jpeg"/>
 
-            <div class="leftSideText">
-                <span class="largeSize">Living Room</span>
-                <p>Your living room has been connected with 5 devices</p>
-                <div class="temp">
-                    <table>
-                        <tr>
-                            <td>
-                                <mat-icon>wb_cloudy</mat-icon>
-                            </td>
-                            <td class="hum">67% Humidity and 27 &#8451;</td>
-                        </tr>
-                    </table>
-                </div>
+    <div class="room">
+        <!--    <div class="room-left" fxFlex="50%" fxLayout="column">-->
+        <img mat-card-image class="living-img" src="assets/images/hang.jpg"/>
+
+        <div class="leftSideText">
+            <span class="largeSize">Living Room</span>
+            <p>Your living room has been connected with 5 devices</p>
+            <div class="temp">
+                <table>
+                    <tr>
+                        <td>
+                            <mat-icon>wb_cloudy</mat-icon>
+                        </td>
+                        <td class="hum">67% Humidity and 27 &#8451;</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
+
     <div class="equipments-up"
          fxLayout="row wrap"
          fxLayout.xs="row"
          fxLayoutGap="3%"
          fxLayoutAlign="center">
         <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-            <mat-slide-toggle>Off/On</mat-slide-toggle>
+            <mat-slide-toggle (change)="setAC($event)">{{ac}}</mat-slide-toggle>
             <img routerLink="../air-cond" class="equ-img" src="assets/images/ac.png">
             <span>Air Condition</span>
 
@@ -47,7 +47,7 @@
         </div>
 
         <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-            <mat-slide-toggle>On/Off</mat-slide-toggle>
+            <mat-slide-toggle checked (change)="setLight($event)">{{light}}</mat-slide-toggle>
             <img routerLink="../lamp" class="equ-img" src="assets/images/bulb.png">
             <span>General Lamp</span>
             <table style="width:100%">
@@ -67,7 +67,7 @@
         </div>
 
         <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-            <mat-slide-toggle>On/Off</mat-slide-toggle>
+            <mat-slide-toggle (change)="setLamp($event)">{{lamp}}</mat-slide-toggle>
             <img class="equ-img" src="assets/images/lamp.png">
             <span>Nightstand Lamp</span>
             <table style="width:100%">
@@ -94,7 +94,7 @@
          fxLayoutGap="3%"
          fxLayoutAlign="center">
         <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-            <mat-slide-toggle>Off/On</mat-slide-toggle>
+            <mat-slide-toggle checked (change)="setWindow($event)">{{window}}</mat-slide-toggle>
             <img class="equ-img" src="assets/images/curtain.png">
             <span>Window Blinds</span>
             <table style="width:100%">
@@ -113,7 +113,7 @@
             </table>
         </div>
         <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
-            <mat-slide-toggle>Off/On</mat-slide-toggle>
+            <mat-slide-toggle (change)="setLamp1($event)">{{lamp1}}</mat-slide-toggle>
             <img class="equ-img" src="assets/images/chandelier.png">
             <span>Central Chandelier</span>
             <table style="width:100%">

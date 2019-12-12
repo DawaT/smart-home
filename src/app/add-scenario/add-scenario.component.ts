@@ -7,6 +7,24 @@ import {MatBottomSheetRef} from '@angular/material';
   styleUrls: ['./add-scenario.component.scss']
 })
 export class AddScenarioComponent implements OnInit {
+  light = 'OFF';
+  ac = 'OFF';
+
+  setLight(e) {
+    if (e.checked) {
+      this.light = 'ON';
+    } else {
+      this.light = 'OFF';
+    }
+  }
+
+  setAC(e) {
+    if (e.checked) {
+      this.ac = 'ON';
+    } else {
+      this.ac = 'OFF';
+    }
+  }
 
   // tslint:disable-next-line:variable-name
   constructor(private _bottomSheetRef: MatBottomSheetRef<AddScenarioComponent>) { }
@@ -15,6 +33,6 @@ export class AddScenarioComponent implements OnInit {
   }
   onNoClick(): void {
     this._bottomSheetRef.dismiss();
-    event.preventDefault();
+    // event.preventDefault();
   }
 }

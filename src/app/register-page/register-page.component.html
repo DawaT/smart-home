@@ -2,39 +2,41 @@
     <div class="image">
         <img class="img" mat-card-image src="assets/images/smarthome.jpg">
     </div>
-    <mat-card class="login">
+    <mat-card class="register">
         <mat-card-header class="header">
-            <mat-card-title class="login-header">Join the Smart Home Community</mat-card-title>
+            <mat-card-title class="register-header">Join the Smart Home Community</mat-card-title>
         </mat-card-header>
 
         <mat-card-content>
             <mat-form-field class="mat-form-field" appearance="outline">
                 <mat-label class="mat-label">Name</mat-label>
-                <input matInput [(ngModel)]="Name" type="name" name="name" required>
+                <input matInput [(ngModel)]="Name" type="name" required>
             </mat-form-field>
 
             <mat-form-field class="mat-form-field" appearance="outline">
                 <mat-label class="mat-label">Username</mat-label>
-                <input matInput [(ngModel)]="username" name="username" required>
+                <input matInput [(ngModel)]="username" type="name" required>
             </mat-form-field>
 
             <mat-form-field class="mat-form-field" appearance="outline">
                 <mat-label class="mat-label">Email</mat-label>
-                <input matInput [(ngModel)]="email" type="email" name="email" required>
+                <input matInput [(ngModel)]="email" type="email" required>
             </mat-form-field>
 
             <mat-form-field class="mat-form-field" appearance="outline">
                 <mat-label class="mat-label">Password</mat-label>
-                <input matInput [(ngModel)]="password" type="password" name="password" required/>
+                <input matInput [(ngModel)]="password" type="password" [type]="hide ? 'password' : 'text'" required/>
+                <mat-icon matSuffix (click)="hide = !hide" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </mat-form-field>
         </mat-card-content>
 
         <span class="checkbox">
-      <p> <mat-checkbox></mat-checkbox> By clicking Create Account, you agree to the Smart Home's <a href="#">User Agreement</a>, <a
-              href="#">Privacy</a>, <a href="#">Policy</a> and <a href="#">Cookie Policy</a></p>
-    </span>
+            <mat-checkbox></mat-checkbox> By clicking Create Account, you agree to the Smart Home's <a
+                href="#">User Agreement</a>, <a
+                href="#">Privacy</a>, <a href="#">Policy</a> and <a href="#">Cookie Policy</a>
+        </span>
 
-        <mat-card-actions class="login-button">
+        <mat-card-actions class="register-button">
             <button class="button" mat-raised-button (click)="createAccount()">Create Account</button>
         </mat-card-actions>
     </mat-card>

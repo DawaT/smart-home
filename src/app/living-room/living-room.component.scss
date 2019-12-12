@@ -1,30 +1,33 @@
 $skyblue: #33AEF2;
-$pink: #F5396C;
+$pink: #ff6666;
 $fontsize: 20px;
+
+@mixin widthHeight {
+  width: 100%;
+  height: auto;
+}
 
 .living-room {
   padding-bottom: 5%;
 
   .room {
-    width: 100%;
-    height: auto;
+    @include widthHeight;
     position: relative;
     background-color: #888888;
 
     .living-img {
       width: 40%;
-      max-height: 250px;
       float: right;
-      padding-right: 2%;
+      margin-right: 5%;
+      max-height: 250px;
       z-index: 0;
     }
   }
 
   .leftSideText {
-    margin-top: 1%;
+    @include widthHeight;
+    margin-top: 4%;
     position: absolute;
-    width: 80%;
-    height: auto;
     left: 4%;
 
     .largeSize {
@@ -32,17 +35,17 @@ $fontsize: 20px;
     }
 
     p {
-      font-size: 20px;
+      font-size: $fontsize;
     }
 
     .temp {
-      width: 60%;
+      width: 50%;
       height: auto;
       background-color: $skyblue;
       border-radius: 10px;
 
       table {
-        width: 100%;
+        @include widthHeight;
 
         mat-icon {
           color: white;
@@ -59,8 +62,7 @@ $fontsize: 20px;
   }
 
   .equipments-down, .equipments-up {
-    width: 100%;
-    height: auto;
+    @include widthHeight;
   }
 
   .room-contain {
@@ -75,10 +77,10 @@ $fontsize: 20px;
       margin: 5px auto;
       cursor: pointer;
       outline: none;
-    }
 
-    .equ-img:hover {
-      transform: scale(1.1);
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     .add-icon {
@@ -95,7 +97,7 @@ $fontsize: 20px;
 
     mat-slide-toggle {
       padding-top: 5%;
-      padding-left: 20%;
+      padding-left: 36%;
       font-size: 20px;
       color: $skyblue;
     }
@@ -104,32 +106,32 @@ $fontsize: 20px;
       padding-left: 10px;
       font-size: 30px;
       color: $pink;
-    }
 
-    mat-icon:hover {
-      transform: scale(1.2);
+      &:hover {
+        transform: scale(1.04)
+      }
     }
   }
 
   @media screen and (max-width: 740px) {
-    height: 800x;
+    height: 100vh;
     .leftSideText {
-      margin-top: 0;
+      margin-top: 2%;
+      margin-left: 4%;
       width: 95%;
       position: absolute;
       left: 1%;
 
       .largeSize {
-        font-size: 20px;
+        font-size: $fontsize;
       }
 
       p {
         font-size: 16px;
-        //margin: 1%;
       }
 
       .temp {
-        width: 70%;
+        width: 65%;
         padding-left: 1%;
 
         table {
@@ -166,7 +168,10 @@ $fontsize: 20px;
   }
 
   @media screen and (max-width: 380px) {
+    height: 100vh;
     .leftSideText {
+      margin-top: 1%;
+      margin-left: 2%;
       font-size: 18px;
 
       p {
