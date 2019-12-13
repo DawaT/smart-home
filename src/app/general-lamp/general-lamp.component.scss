@@ -1,33 +1,44 @@
+@mixin dimension {
+  width: 100%;
+  height: auto;
+}
+
+$skyblue: #33AEF2;
+$pink: #ff6666;
+$fontsize: 20px;
+
 .lamp-container {
   max-width: 500px;
-  height: auto;
+  height: 100vh;
   margin: auto;
   text-align: center;
 
-  .ac-tab {
+  .heading {
+    font-size: 27px;
+  }
+
+  .ac-icon {
     display: flex;
-    font-size: 20px;
+    justify-content: center;
 
-    img {
-      width: 45px;
-      height: 45px;
-      padding-right: 30%;
-      padding-top: 10%;
-    }
+    .ac-tab {
+      @extend .ac-icon;
+      font-size: $fontsize;
 
-    mat-icon {
-      font-size: 45px;
-      padding-bottom: 100%;
-    }
+      img {
+        width: 35px;
+        height: 40px;
 
-    mat-icon:hover {
-      transform: scale(1.1);
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 
   .outerLayer {
-    margin: 8% auto;
-    width: 100%;
+    @include dimension;
+    margin: auto;
 
     .back-blue {
       margin: 2% auto;
@@ -45,18 +56,18 @@
         padding: 30px;
 
         img {
-          width: 130px;
-          height: 130px;
+          width: 120px;
+          height: 120px;
         }
-
-        p {
-          font-size: 20px;
+        p{
+          font-size: $fontsize;
         }
       }
     }
   }
 
   .slider {
+    @include dimension;
     display: inline;
 
     mat-slider {
@@ -70,52 +81,61 @@
   }
 
   .mode {
+    @include dimension;
+    width: 90%;
     margin: auto;
 
     .mode-icon {
-      margin: 10%;
-      width: 100%;
-      height: 100%;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
       box-shadow: 1px 1px 4px #888888;
+      margin-left: 25%;
 
       mat-icon {
         font-size: 40px;
-        padding-right: 30%;
-        padding-top: 10%;
+        margin: 4%;
+        padding-right: 32%;
+      }
 
+      &:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 20px #888888;
+        transform: scale(1.1);
       }
     }
 
-    .mode-icon:hover {
-      cursor: pointer;
-      box-shadow: 1px 1px 20px #888888;
-      transform: scale(1.1);
-    }
-
     td {
-      padding: 0 20px;
       font-size: 18px;
     }
   }
 
   a {
     align-self: flex-end;
-    justify-content: flex-end;
     outline: none;
     font-size: 18px;
-  }
-
-  a:hover {
-    transform: scale(1.2);
+    margin-top: 4%;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
 @media screen and (max-width: 485px) {
   .lamp-container {
+    .heading {
+      font-size: 23px;
+    }
+
     .mode {
-      td {
-        padding: 0 5px;
+      .mode-icon {
+        width: 35px;
+        height: 35px;
+
+        mat-icon {
+          font-size: 30px;
+          margin: 8%;
+        }
       }
     }
   }

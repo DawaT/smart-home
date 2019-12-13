@@ -1,9 +1,13 @@
+$skyblue: #33AEF2;
+$pink: #ff6666;
+$fontsize: 20px;
+
 .Add-scenario {
   width: 100%;
   margin: 5% 4%;
 
   .matForm {
-    font-size: 20px;
+    font-size: $fontsize;
   }
 
   .grid-container {
@@ -14,7 +18,7 @@
 
   .grid-item {
     padding: 10px;
-    font-size: 20px;
+    font-size: $fontsize;
 
     input {
       border: none;
@@ -26,16 +30,11 @@
     display: grid;
     grid-template-columns: auto auto;
     margin: 4%;
-    padding-right: 5%;
-
-    mat-slide-toggle {
-      float: right;
-    }
   }
 
   button {
     margin: 5%;
-    background-color: #F5396C;
+    background-color: $pink;
     color: white;
 
     &:hover {

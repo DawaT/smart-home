@@ -2,15 +2,23 @@ $skyblue: #33AEF2;
 $pink: #ff6666;
 $fontsize: 20px;
 
-.profile {
+@mixin ColFlex {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.profile {
+  @include ColFlex;
   height: 100vh;
 
   .basic-info {
-    background-color: #ff6666;
-
+    width: 94%;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #888888;
+    //background-image: linear-gradient(to bottom, #ff6666 0%, #fe5196 100%);
+    background-image: linear-gradient(to bottom, #ff6666 0%, #ff8080 100%);
     .profile-img {
       margin: 2% auto;
       padding-left: 10%;
@@ -54,27 +62,26 @@ $fontsize: 20px;
     margin: 0 3%;
     width: auto;
     background-color: $pink;
-    color: #ffffff;
+    color: white;
   }
 
   button {
     width: 80%;
     height: 50px;
-    font-size: 20px;
+    font-size: $fontsize;
     background-color: $skyblue;
     margin: 4% auto;
-    color: #ffffff;
-  }
+    color: white;
 
-  button:hover {
-    transform: scale(1.03);
-    box-shadow: 1px 1px 5px #888888;
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 1px 1px 5px #888888;
+    }
   }
 
   .profile-form {
+    @include ColFlex;
     min-width: 150px;
-    max-width: 100%;
-    width: 100%;
     font-size: 18px;
   }
 
@@ -99,7 +106,7 @@ $fontsize: 20px;
 
 .rating-list li:hover,
 .rating-list li:hover ~ li, .rating-list li.selected {
-  color: #ffd700;
+  color: $pink;
 }
 
 .rating-list {
