@@ -1,7 +1,8 @@
-@mixin heightWidth{
+@mixin heightWidth {
   width: 100%;
   height: auto;
 }
+
 $skyblue: #33AEF2;
 $pink: #ff6666;
 $fontsize: 20px;
@@ -12,7 +13,7 @@ $fontsize: 20px;
   margin: auto;
   text-align: center;
 
-  .header1{
+  .header1 {
     font-size: 27px;
   }
 
@@ -54,11 +55,67 @@ $fontsize: 20px;
         border-radius: 50%;
         background-color: white;
         padding: 30px;
-        .temperature{
+
+        .temperature {
           padding-top: 10%;
         }
       }
     }
+
+    #air-cond-90, #air-cond-91, #air-cond-92, #air-cond-93, #air-cond-94, #air-cond-95 {
+      transform: rotate(360deg);
+      transition: 2s;
+    }
+
+    #air-cond-95, #air-cond-96, #air-cond-97, #air-cond-98, #air-cond-99, #air-cond-100 {
+      background: #33aef2;
+      transform: rotate(360deg);
+      transition: 2s;
+    }
+  }
+
+  ::ng-deep{
+     .mat-accent .mat-slider-thumb {
+      background-color: #0099ff;
+      bottom: -11px;
+    }
+
+     .mat-accent .mat-slider-track-background {
+      background: linear-gradient(to right, #99ffcc 0%, #0099ff 100%);
+      height: 100%;
+    }
+
+     .mat-accent .mat-slider-track-fill {
+      background-color: #0099ff;
+      height: 100%;
+    }
+
+     .mat-accent .mat-slider-thumb-label {
+      background-color: #0099ff;
+    }
+
+    .mat-accent .mat-slider-track-wrapper {
+      height: 7px;
+      border-radius: 10px;
+    }
+  }
+
+
+  ::ng-deep {
+
+    .mat-slider-thumb-label {
+      transform: rotate(45deg) !important;
+      border-radius: 50% 50% 0 !important;
+    }
+
+    .mat-slider-thumb {
+      transform: scale(0) !important;
+    }
+
+    .mat-slider-thumb-label-text {
+      opacity: 1 !important;
+    }
+
   }
 
   .slider {
@@ -108,6 +165,7 @@ $fontsize: 20px;
     align-self: flex-end;
     outline: none;
     font-size: 18px;
+
     &:hover {
       transform: scale(1.2);
     }
@@ -117,9 +175,10 @@ $fontsize: 20px;
 
 @media screen and (max-width: 485px) {
   .ac-container {
-    .header1{
+    .header1 {
       font-size: 23px;
     }
+
     .ac-icon {
 
       .ac-tab {
@@ -130,6 +189,7 @@ $fontsize: 20px;
         }
       }
     }
+
     .mode {
       .mode-icon {
         width: 35px;

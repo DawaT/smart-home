@@ -71,6 +71,7 @@ $fontsize: 20px;
     align-content: center;
     border-radius: 6px;
     box-shadow: 1px 1px 5px #888888;
+    padding: 2% 0;
 
     .equ-img {
       width: 50%;
@@ -82,24 +83,25 @@ $fontsize: 20px;
         transform: scale(1.1);
       }
     }
-
     .add-icon {
-      font-size: 8vw;
-      padding: 33%;
+      font-size: 5vw;
+      margin: 34%;
       cursor: pointer;
     }
 
     span {
       font-size: 20px;
-      padding: 0 5%;
       text-align: center;
     }
 
     mat-slide-toggle {
-      padding-top: 5%;
-      padding-left: 36%;
+      align-self: center;
       font-size: 20px;
       color: $skyblue;
+    }
+    table{
+      @include widthHeight;
+      margin: 5%;
     }
 
     mat-icon {
@@ -112,6 +114,7 @@ $fontsize: 20px;
       }
     }
   }
+
 
   @media screen and (max-width: 740px) {
     height: 100vh;
@@ -152,14 +155,19 @@ $fontsize: 20px;
 
 
     .room-contain {
+      padding: 0;
       span {
         font-size: 18px;
       }
 
       mat-slide-toggle {
         font-size: 18px;
-        padding-left: 6%;
       }
+      table{
+        @include widthHeight;
+        margin: 3%;
+      }
+
 
       mat-icon {
         font-size: 20px;
@@ -193,6 +201,10 @@ $fontsize: 20px;
       mat-slide-toggle {
         font-size: 16px;
       }
+      table{
+        margin: 0;
+      }
+
     }
   }
 

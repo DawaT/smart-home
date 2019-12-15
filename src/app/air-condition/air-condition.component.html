@@ -24,7 +24,7 @@
             </mat-tab-group>
         </div>
         <div class="outerLayer">
-            <div class="back-blue">
+            <div class="back-blue" id="{{'air-cond-' + gridsize.value}}">
                 <div class="front">
                     <h1 class="temperature">  {{gridsize.value}} &#8451; </h1>
                     <p class="temperature">Current Temp: 34 &#8451;</p>
@@ -35,7 +35,7 @@
         <!--    tickInterval="1"-->
         <div class="slider">
             <mat-icon>maximize</mat-icon>
-            <mat-slider thumbLabel value="24" #gridsize (change)="onChange($event)" [value]="gridsize"></mat-slider>
+            <mat-slider thumbLabel value="24" #gridsize (change)="onChange($event)"></mat-slider>
             <mat-icon class="add">add</mat-icon>
         </div>
         <table class="mode" cellspacing="22">

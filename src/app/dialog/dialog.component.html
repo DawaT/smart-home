@@ -8,13 +8,13 @@
         <section class="Equ-section">
             <mat-checkbox [(ngModel)]="showTicks">Bulbs</mat-checkbox>
             <mat-form-field class="Equ-type" *ngIf="showTicks">
-                <input matInput placeholder=" No. of Bulb: " type="number" [(ngModel)]="tickInterval">
+                <input matInput placeholder=" No. of Bulb: " type="number">
             </mat-form-field>
         </section>
         <section class="Equ-section">
             <mat-checkbox [(ngModel)]="showTicks1">Air Condition</mat-checkbox>
             <mat-form-field class="Equ-type" *ngIf="showTicks1">
-                <input matInput placeholder=" No. of AC: " type="number" [(ngModel)]="tickInterval1">
+                <input matInput placeholder=" No. of AC: " type="number">
             </mat-form-field>
         </section>
     </mat-dialog-content>

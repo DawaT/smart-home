@@ -11,11 +11,10 @@ $fontsize: 20px;
     box-shadow: 1px 1px 1px #888888;
     margin: 2% auto;
     border-radius: 10px;
+  }
 
-    .inpt {
-      font-size: 20px;
-      width: 50%;
-    }
+  input{
+    text-align: center;
   }
 
   mat-dialog-actions {

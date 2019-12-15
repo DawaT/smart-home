@@ -51,7 +51,6 @@ $fontsize: 20px;
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        box-shadow: 0 0 60px 20px #fcf003;
         text-align: center;
         padding: 30px;
 
@@ -59,11 +58,79 @@ $fontsize: 20px;
           width: 120px;
           height: 120px;
         }
-        p{
+
+        p {
           font-size: $fontsize;
         }
       }
+
+      [id ^= "brightness-"] {
+        box-shadow: 0 0 30px 10px #fcf003;
+      }
+      [id *= "-1"]:not([id $= "-1"]){
+        box-shadow: 0 0 40px 20px #fcf003;
+      }
+      [id *= "-2"]:not([id $= "-2"]),
+      [id *= "-3"]:not([id $= "-3"]) {
+        box-shadow: 0 0 50px 25px #fcf003;
+      }
+
+      [id *= "-4"]:not([id $= "-4"]),
+      [id *= "-5"]:not([id $= "-5"]) {
+        box-shadow: 0 0 60px 30px #fcf003;
+      }
+
+      [id *= "-6"]:not([id $= "-6"]),
+      [id *= "-7"]:not([id $= "-7"]) {
+        box-shadow: 0 5px 75px 40px #fcf003;
+      }
+
+      [id *= "-8"]:not([id $= "-8"]),
+      [id *= "-9"]:not([id $= "-9"]),
+      [id *= "-10"]:not([id $= "-10"]) {
+        box-shadow: 0 10px 90px 50px #fcf003;
+      }
+
     }
+  }
+
+  ::ng-deep .mat-accent .mat-slider-thumb {
+    background-color: #ffcc00;
+    bottom: -11px;
+  }
+  ::ng-deep .mat-accent .mat-slider-track-background{
+    background: linear-gradient(to right, #ffff99 0%, #ffcc00 100%);
+    height: 100%;
+  }
+  ::ng-deep .mat-accent .mat-slider-track-fill {
+    background-color: #ffcc00;
+    height: 100%;
+  }
+  ::ng-deep .mat-accent .mat-slider-thumb-label {
+    background-color: #ffcc00;
+  }
+
+  ::ng-deep .mat-accent .mat-slider-track-wrapper {
+      height: 7px;
+      border-radius: 10px;
+    }
+
+  ::ng-deep {
+
+    .mat-slider-thumb-label {
+      transform: rotate(45deg) !important;
+      border-radius: 50% 50% 0 !important;
+    }
+
+    .mat-slider-thumb {
+      transform: scale(0) !important;
+    }
+
+    .mat-slider-thumb-label-text {
+      opacity: 1 !important;
+      color: #000000;
+    }
+
   }
 
   .slider {
@@ -115,6 +182,7 @@ $fontsize: 20px;
     outline: none;
     font-size: 18px;
     margin-top: 4%;
+
     &:hover {
       transform: scale(1.2);
     }
