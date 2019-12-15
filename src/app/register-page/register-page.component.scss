@@ -82,10 +82,9 @@ $fontsize: 20px;
     a {
       text-decoration: none;
       color: $pink;
-    }
-
-    a:hover {
-      color: $skyblue;
+      &:hover {
+        color: $skyblue;
+      }
     }
   }
 }

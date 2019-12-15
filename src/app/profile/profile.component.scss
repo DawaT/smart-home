@@ -17,7 +17,6 @@ $fontsize: 20px;
     align-self: center;
     border-radius: 5px;
     box-shadow: 1px 1px 6px #888888;
-    //background-image: linear-gradient(to bottom, #ff6666 0%, #fe5196 100%);
     background-image: linear-gradient(to bottom, #ff6666 0%, #ff8080 100%);
     .profile-img {
       margin: 2% auto;
@@ -30,8 +29,13 @@ $fontsize: 20px;
     }
 
     .name {
-      padding-top: 4%;
+      padding: 4%;
+      .name-size{
+        font-size: 30px;
+        font-weight: bold;
+      }
     }
+
   }
 
   .information {
@@ -122,6 +126,11 @@ $fontsize: 20px;
 
         mat-icon {
           font-size: 150px;
+        }
+      }
+      .name{
+        .name-size{
+          font-size: 25px;
         }
       }
     }

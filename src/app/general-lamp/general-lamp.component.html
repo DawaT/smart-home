@@ -19,8 +19,8 @@
         </div>
         <div class="outerLayer">
             <div class="back-blue">
-                <div class="front">
-                    <img src="assets/images/center-bulb.png">
+                <div class="front"  id="{{'brightness-' + gridsize.value}}">
+                    <img src="assets/images/center-bulb.jpg">
                     <p>Current Brightness: <b>{{gridsize.value}}</b>%</p>
                 </div>
             </div>
@@ -29,7 +29,7 @@
         <!--    tickInterval="1"-->
         <div class="slider">
             <mat-icon>maximize</mat-icon>
-            <mat-slider thumbLabel value="24" #gridsize (change)="onChange($event)" [value]="gridsize"></mat-slider>
+            <mat-slider thumbLabel value="35" #gridsize (change)="onChange($event)"></mat-slider>
             <mat-icon class="add">add</mat-icon>
         </div>
         <table class="mode">

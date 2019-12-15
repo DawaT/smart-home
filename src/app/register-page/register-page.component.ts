@@ -21,7 +21,7 @@ export class RegisterPageComponent implements OnInit {
     }
 
     createAccount(): void {
-        if (this.name !== '' || this.username !== '' || this.email !== '' || this.password === '') {
+        if (this.name !== '' || this.username !== '' || this.email !== '' || this.password !== '') {
             this.router.navigate(['login']);
         } else {
             alert('Please, fill the required details');

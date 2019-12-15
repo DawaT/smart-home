@@ -29,7 +29,7 @@
             <img routerLink="../air-cond" class="equ-img" src="assets/images/ac.png">
             <span>Air Condition</span>
 
-            <table style="width:100%">
+            <table>
                 <tr>
                     <td>
                         <mat-icon>turned_in</mat-icon>
@@ -49,7 +49,7 @@
             <mat-slide-toggle checked (change)="setLight($event)">{{light}}</mat-slide-toggle>
             <img routerLink="../lamp" class="equ-img" src="assets/images/bulb.png">
             <span>General Lamp</span>
-            <table style="width:100%">
+            <table>
                 <tr>
                     <td>
                         <mat-icon>turned_in</mat-icon>
@@ -67,9 +67,9 @@
 
         <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
             <mat-slide-toggle (change)="setLamp($event)">{{lamp}}</mat-slide-toggle>
-            <img class="equ-img" src="assets/images/lamp.png">
+            <img class="equ-img" src="assets/images/lamp1.png">
             <span>Nightstand Lamp</span>
-            <table style="width:100%">
+            <table>
                 <tr>
                     <td>
                         <mat-icon>turned_in</mat-icon>
@@ -96,7 +96,7 @@
             <mat-slide-toggle checked (change)="setWindow($event)">{{window}}</mat-slide-toggle>
             <img class="equ-img" src="assets/images/curtain.png">
             <span>Window Blinds</span>
-            <table style="width:100%">
+            <table>
                 <tr>
                     <td>
                         <mat-icon>turned_in</mat-icon>
@@ -115,7 +115,7 @@
             <mat-slide-toggle (change)="setLamp1($event)">{{lamp1}}</mat-slide-toggle>
             <img class="equ-img" src="assets/images/chandelier.png">
             <span>Central Chandelier</span>
-            <table style="width:100%">
+            <table>
                 <tr>
                     <td>
                         <mat-icon>turned_in</mat-icon>
@@ -130,7 +130,7 @@
                 </tr>
             </table>
         </div>
-        <div class="room-contain" id="AddIcon" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
+        <div class="room-contain" fxFlex="0 1 calc(30% - 32px)" fxFlex.xs="90%">
             <div>
                 <mat-icon class="add-icon">add</mat-icon>
             </div>

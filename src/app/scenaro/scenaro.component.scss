@@ -38,6 +38,10 @@
     text-align: center;
     box-shadow: 1px 1px 2px 2px #888888;
     cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 4px 4px #999999;
+    }
 
     .iconAdd {
       margin: 5%;
@@ -56,13 +60,8 @@
     }
   }
 
-  .click-add:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 4px 4px #999999;
-  }
-
   @media screen and (max-width: 600px) {
-    height: 700px;
+    height: 100vh;
     .click-add {
       margin-left: 0;
       width: 46%;
