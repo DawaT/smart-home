@@ -2,22 +2,22 @@
     <div>
         <p class="header1">Air Condition</p>
         <div class="ac-icon">
-            <mat-tab-group class="ac-tab">
+            <mat-tab-group class="ac-tab"  [selectedIndex]="1">
                 <mat-tab>
                     <ng-template mat-tab-label>
-                        <mat-icon>ac_unit</mat-icon>
+                        <mat-icon (click)="gridsize.value=30" >ac_unit</mat-icon>
                     </ng-template>
                     Refrigeration mode
                 </mat-tab>
                 <mat-tab>
                     <ng-template mat-tab-label>
-                        <mat-icon>wb_sunny</mat-icon>
+                        <mat-icon (click)="gridsize.value=24">wb_sunny</mat-icon>
                     </ng-template>
                     Sunny day mode
                 </mat-tab>
                 <mat-tab>
                     <ng-template mat-tab-label>
-                        <mat-icon>brightness_7</mat-icon>
+                        <mat-icon (click)="gridsize.value=15">brightness_7</mat-icon>
                     </ng-template>
                     Hot mode
                 </mat-tab>

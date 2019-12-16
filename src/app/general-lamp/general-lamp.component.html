@@ -2,24 +2,30 @@
     <div>
         <p class="heading">General Lamp</p>
         <div class="ac-icon">
-            <mat-tab-group class="ac-tab">
+            <mat-tab-group class="ac-tab" [selectedIndex]="1">
                 <mat-tab>
-                    <ng-template mat-tab-label><img src="assets/images/bulb-icon3.jpg"></ng-template>
+                    <ng-template mat-tab-label>
+                        <img src="assets/images/bulb-icon3.jpg" (click)="gridsize.value=10">
+                    </ng-template>
                     Brightest mode
                 </mat-tab>
                 <mat-tab>
-                    <ng-template mat-tab-label><img src="assets/images/bulb-icon2.png"></ng-template>
+                    <ng-template mat-tab-label>
+                        <img src="assets/images/bulb-icon2.png" (click)="gridsize.value=50">
+                    </ng-template>
                     Dim mode
                 </mat-tab>
                 <mat-tab>
-                    <ng-template mat-tab-label><img src="assets/images/bulb-icon1.png"></ng-template>
+                    <ng-template mat-tab-label>
+                        <img src="assets/images/bulb-icon1.png" (click)="gridsize.value=80">
+                    </ng-template>
                     Dark mode
                 </mat-tab>
             </mat-tab-group>
         </div>
         <div class="outerLayer">
             <div class="back-blue">
-                <div class="front"  id="{{'brightness-' + gridsize.value}}">
+                <div class="front" id="{{'brightness-' + gridsize.value}}">
                     <img src="assets/images/center-bulb.jpg">
                     <p>Current Brightness: <b>{{gridsize.value}}</b>%</p>
                 </div>
